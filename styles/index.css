@@ -70,9 +70,10 @@ nav a:hover {
 
 /* Hero */
 .hero {
-    text-align: center;
-    padding: 100px 20px;
+    text-align: left;
+    padding: 100px 5%;
     animation: fadeIn 1.5s ease;
+    background: #0b0000;
 }
 
 .hero-container {
@@ -85,11 +86,21 @@ nav a:hover {
 }
 
 .hero h1 {
-    font-size: 5rem; /* Make it much larger */
-    line-height: 1;
-    margin-bottom: 20px;
+    font-size: 4rem;
+    font-weight: 900;
+    color: #ffffff;
+    margin-bottom: 10px;
+    letter-spacing: -2px;
+    text-transform: uppercase;
 }
-
+.hero-subtitle {
+    font-size: 1.1rem;
+    color: rgba(255, 255, 255, 0.7); /* Faded white so it doesn't compete with the title */
+    max-width: 500px; /* Prevents the text from stretching too far */
+    line-height: 1.6;
+    font-weight: 300; /* Light weight for a clean look */
+    margin-bottom: 30px;
+}
 .btn-join {
     background: #ff0000;
     color: white;
