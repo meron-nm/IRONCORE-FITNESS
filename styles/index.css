@@ -1,0 +1,476 @@
+/* Google Font Import */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: #0b0000;
+    color: white;
+    line-height: 1.6;
+    background-image: repeating-linear-gradient(
+        90deg,
+        rgba(255, 0, 0, 0.25) 0px,
+        rgba(255, 0, 0, 0.25) 1px,
+        transparent 1px,
+        transparent 18px
+    );
+}
+
+/* Navbar */
+nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 40px;
+    background: rgba(0, 0, 0, 0.8);
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    transition: 0.3s;
+}
+/* This removes the blue color and underlines */
+.navbar ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+/* This puts the links in a horizontal line instead of a bullet list */
+.navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+/* This ensures the header stays at the top and is visible */
+header {
+    background: #000;
+    padding: 20px;
+    width: 100%;
+}
+
+nav a:hover {
+    color: red;
+    transform: scale(1.1);
+}
+
+/* Hero */
+.hero {
+    text-align: center;
+    padding: 100px 20px;
+    animation: fadeIn 1.5s ease;
+}
+
+.hero-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: left; /* Align text to the left like the screenshot */
+}
+
+.hero h1 {
+    font-size: 5rem; /* Make it much larger */
+    line-height: 1;
+    margin-bottom: 20px;
+}
+
+.btn-join {
+    background: #ff0000;
+    color: white;
+    padding: 15px 40px;
+    text-decoration: none;
+    font-weight: bold;
+    display: inline-block;
+}
+.hero-image {
+    flex: 1; /* Takes up half the space */
+    max-width: 500px; /* Limits the container width */
+}
+
+.hero-image img {
+    width: 100%; /* Fills the 500px container exactly */
+    border-radius: 4px; /* Optional: adds a slight curve like the screenshot */
+}
+/* Sections */
+section {
+    padding: 60px 30px;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #ff4d4d;
+}
+
+
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #ff1a1a;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-style: italic;
+    text-shadow: 0 0 8px rgba(255, 0, 0, 0.7);
+}
+/* Enable Smooth Scrolling at the top of your file */
+html {
+    scroll-behavior: smooth;
+}
+
+.plans {
+    text-align: center;
+    padding: 100px 20px;
+    background: #0b0000; /* Matching your dark theme */
+}
+
+.plans h2 {
+    font-size: 2rem;
+    letter-spacing: 2px;
+    margin-bottom: 60px;
+    text-transform: uppercase;
+}
+
+.plan-cards {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    flex-wrap: wrap;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.plan {
+    flex: 1;
+    min-width: 250px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centers everything inside the card */
+}
+
+.plan h3 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.plan .price {
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.features {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 30px;
+    color: #fff;
+    font-weight: 400;
+}
+
+/* Target the button ONLY inside the featured plan */
+.plan.featured .btn-plan {
+    background: #ff0000; /* Brighter, "hot" red */
+    font-weight: 800;
+    letter-spacing: 1px;
+    transform: scale(1.1); /* Makes the button slightly larger than others */
+    box-shadow: 0 4px 15px rgba(255, 0, 0, 0.5); /* Adds a red shadow/glow underneath */
+    transition: all 0.3s ease-in-out;
+}
+
+/* Add a hover effect that makes it "grow" even more */
+.plan.featured .btn-plan:hover {
+    background: #ff3333;
+    transform: scale(1.15);
+    box-shadow: 0 6px 20px rgba(255, 0, 0, 0.7);
+}
+
+/* Optional: Subtle Pulse Animation to draw the eye */
+@keyframes pulse {
+    0% { box-shadow: 0 0 0 0 rgba(255, 0, 0, 0.7); }
+    70% { box-shadow: 0 0 0 10px rgba(255, 0, 0, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(255, 0, 0, 0); }
+}
+
+.plan.featured .btn-plan {
+    animation: pulse 2s infinite;
+}
+/* Container for the Trainers */
+.trainer-container {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* Individual Trainer Card */
+.trainer-card {
+    background: rgba(255, 255, 255, 0.15); /* Semi-transparent gray box */
+    padding: 50px 30px;
+    border-radius: 40px; /* Highly rounded corners like the screenshot */
+    width: 350px;
+    text-align: center;
+    backdrop-filter: blur(5px); /* Optional: adds a modern frosted glass look */
+    transition: transform 0.3s ease;
+}
+
+.trainer-card:hover {
+    transform: translateY(-10px);
+    background: rgba(255, 255, 255, 0.2);
+}
+
+/* Typography for the Card */
+.trainer-card h3 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 5px;
+    letter-spacing: 1px;
+}
+
+.trainer-card .specialty {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #fff;
+    margin-bottom: 25px;
+}
+
+.trainer-card .quote {
+    font-family: 'Georgia', serif; /* Use a serif font for the quote style */
+    font-style: italic;
+    font-size: 1.1rem;
+    color: #ddd;
+    line-height: 1.4;
+}
+
+
+
+/* Gallery Styling */
+.gallery-section {
+    padding: 80px 20px;
+    text-align: center;
+    background: #0b0000;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px;
+    max-width: 1200px;
+    margin: 40px auto 0;
+}
+
+.gallery-grid img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover; /* Ensures images don't look stretched */
+    border-radius: 8px;
+    filter: grayscale(100%) brightness(0.7); /* Dark & Gritty look */
+    transition: all 0.5s ease;
+    cursor: pointer;
+}
+
+/* When the user hovers, the image comes to life */
+.gallery-grid img:hover {
+    filter: grayscale(0%) brightness(1);
+    transform: scale(1.03);
+    box-shadow: 0 10px 20px rgba(255, 0, 0, 0.3);
+}
+
+
+
+
+
+/* Testimonials Styling */
+.testimonials {
+    padding: 80px 20px;
+    background: #0b0000; /* Dark background from your theme */
+    text-align: center;
+}
+
+.testimonial-container {
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Space between the rows */
+}
+
+.testimonial-box {
+    background-color: #ff8a8a; /* The pinkish-red color from your screenshot */
+    padding: 25px 30px;
+    text-align: left; /* Text is aligned to the left */
+    color: #000; /* Black text for high contrast */
+    border-radius: 4px; /* Very slight rounding */
+    transition: transform 0.3s ease;
+}
+
+.testimonial-box:hover {
+    transform: scale(1.02); /* Subtle pop effect on hover */
+}
+
+.testimonial-box p {
+    font-size: 1.1rem;
+    line-height: 1.4;
+    margin: 0;
+}
+
+.testimonial-box strong {
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+/* The Rounded Red Buttons from the screenshot */
+.btn-plan {
+    background: #b32d3a; /* That specific deep red color */
+    color: white;
+    text-decoration: none;
+    padding: 12px 35px;
+    border-radius: 50px; /* Fully rounded corners */
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: background 0.3s ease;
+}
+
+.btn-plan:hover {
+    background: #ff0000;
+}
+
+
+
+
+
+
+.tip-boxes {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+
+
+.tip {
+    background: rgba(255,255,255,0.08);
+    padding: 20px;
+    border-radius: 10px;
+    width: 220px;
+    text-align: center;
+    transition: 0.3s;
+}
+
+
+
+.tip:hover {
+    transform: translateY(-8px);
+    background: rgba(255,0,0,0.2);
+}
+
+/* Gallery */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+}
+
+.gallery-grid img {
+    width: 100%;
+    border-radius: 10px;
+    transition: 0.4s;
+}
+
+.gallery-grid img:hover {
+    transform: scale(1.05);
+}
+
+/* Form */
+form {
+    max-width: 500px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+input,
+textarea,
+button {
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+}
+
+input:focus,
+textarea:focus {
+    outline: 2px solid red;
+}
+
+button {
+    background: red;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: darkred;
+    transform: scale(1.03);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: black;
+}
+
+/* Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Tablet */
+@media (max-width: 1024px) {
+    .hero h1 {
+        font-size: 2.3rem;
+    }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+    nav {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+}
